@@ -23,20 +23,16 @@ function SpeedsController(app) {
   };
 
   const createSpeed = async (req, res) => {
-    const currentUser = req.session["currentUser"];
-    if (currentUser) {
-      const newSpeed = { ...req.body, author: currentUser._id };
+    const author = req.params.author;
+      const newSpeed = { ...req.body, author: author };
       const actualSpeed = await speedsDao.createSpeeds(newSpeed);
       res.json(actualSpeed);
-    } else {
-      res.sendStatus(403);
-    }
     
   }
 
   app.get("/api/speeds", findAllSpeeds);
   app.get("/api/speeds/:author", findSpeedsByAuthorId);
-  app.post("/api/speeds", createSpeed);
+  app.post("/api/speeds/:author", createSpeed);
   app.get("/api/my-speeds", findMySpeeds);
 }
 
