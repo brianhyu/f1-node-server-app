@@ -11,17 +11,15 @@ mongoose.connect(
 )
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
 
 const app = express();
 app.set("trust proxy", 1);
 app.use(
   cors({
     credentials: true,
-    origin: ["https://main--warm-cendol-deab82.netlify.app",
-      "http://localhost:3000",
-      "http://ergast.com/"
+    origin: ["https://main--warm-cendol-deab82.netlify.app"
+      // "http://localhost:3000",
+      // "http://ergast.com/"
     ]
   })
 );
