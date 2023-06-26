@@ -8,21 +8,17 @@ import mongoose from "mongoose";
 
 mongoose.connect(
   "mongodb+srv://Guest:Guest@cluster0.kcmgz9i.mongodb.net/?retryWrites=true&w=majority"
-)
-  .then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err));
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+);
+// mongoose.connect("mongodb://127.0.0.1:27017/tuiter-su1-23");
 
 const app = express();
 app.set("trust proxy", 1);
 app.use(
   cors({
     credentials: true,
-    origin: ["https://main--warm-cendol-deab82.netlify.app",
-      "http://localhost:3000",
-      "http://ergast.com/"
-    ]
+
+    origin: "https://a6--resonant-quokka-5a61c8.netlify.app",
+    // origin: "http://localhost:3000",
   })
 );
 
