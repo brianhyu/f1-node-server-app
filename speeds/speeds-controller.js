@@ -24,9 +24,14 @@ function SpeedsController(app) {
 
   const createSpeed = async (req, res) => {
     const currentUser = req.session["currentUser"];
-    const newSpeed = { ...req.body, author: currentUser._id };
-    const actualSpeed = await speedsDao.createSpeeds(newSpeed);
-    res.json(actualSpeed);
+    if (currentUser) {
+      const newSpeed = { ...req.body, author: currentUser._id };
+      const actualSpeed = await speedsDao.createSpeeds(newSpeed);
+      res.json(actualSpeed);
+    } else {
+      res.sendStatus(403);
+    }
+    
   }
 
   app.get("/api/speeds", findAllSpeeds);
