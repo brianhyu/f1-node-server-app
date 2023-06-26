@@ -9,4 +9,4 @@ export const createTuit = (tuit) => speedsModel.create(tuit);
 
 export const findAllSpeeds =  () => speedsModel.find();
 
-export const createSpeeds = () => speedsModel.create(speed);
+export const createSpeeds = (speed) => speedsModel.create(speed);
