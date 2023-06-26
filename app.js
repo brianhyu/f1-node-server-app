@@ -17,10 +17,7 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     credentials: true,
-    origin: ["https://main--warm-cendol-deab82.netlify.app"
-      // "http://localhost:3000",
-      // "http://ergast.com/"
-    ]
+    origin: "https://main--warm-cendol-deab82.netlify.app"
   })
 );
 
