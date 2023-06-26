@@ -1,4 +1,4 @@
 import mongoose from "mongoose";
-import tuitsSchema from "./speeds-schema.js";
-const tuitsModel = mongoose.model("tuits", tuitsSchema);
-export default tuitsModel;
+import speedsSchema from "./speeds-schema.js";
+const speedsModel = mongoose.model("tuits", speedsSchema);
+export default speedsModel;
