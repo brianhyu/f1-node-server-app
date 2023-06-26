@@ -8,3 +8,5 @@ export const findTuitsByAuthorId = (author) => speedsModel.find({ author });
 export const createTuit = (tuit) => speedsModel.create(tuit);
 
 export const findAllSpeeds =  () => speedsModel.find();
+
+export const createSpeeds = () => speedsModel.create(speed);

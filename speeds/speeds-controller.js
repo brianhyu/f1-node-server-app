@@ -22,9 +22,16 @@ function SpeedsController(app) {
     res.json(actualTuit);
   };
 
+  const createSpeed = async (req, res) => {
+    const currentUser = req.session["currentUser"];
+    const newSpeed = { ...req.body, author: currentUser._id };
+    const actualSpeed = await speedsDao.createTuit(newSpeed);
+    res.json(actualSpeed);
+  }
+
   app.get("/api/speeds", findAllSpeeds);
   app.get("/api/speeds/:author", findSpeedsByAuthorId);
-  app.post("/api/speeds", createTuit);
+  app.post("/api/speeds", createSpeed);
   app.get("/api/my-speeds", findMySpeeds);
 }
 
