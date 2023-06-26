@@ -6,6 +6,7 @@ const speedsSchema = new mongoose.Schema(
     speed: String,
     created: { type: Date, default: Date.now },
     author: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
+    username: String,
   },
   { collection: "speeds" }
 );

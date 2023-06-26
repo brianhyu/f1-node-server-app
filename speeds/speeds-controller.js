@@ -23,11 +23,12 @@ function SpeedsController(app) {
   };
 
   const createSpeed = async (req, res) => {
+    console.log(req.url)
     const author = req.params.author;
-      const newSpeed = { ...req.body, author: author };
-      const actualSpeed = await speedsDao.createSpeeds(newSpeed);
-      res.json(actualSpeed);
-    
+    const newSpeed = { ...req.body, author: author };
+    const actualSpeed = await speedsDao.createSpeeds(newSpeed);
+    res.json(actualSpeed);
+
   }
 
   app.get("/api/speeds", findAllSpeeds);
