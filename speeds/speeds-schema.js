@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
-const tuitsSchema = new mongoose.Schema(
+const speedsSchema = new mongoose.Schema(
   {
     topic: String,
     title: String,
-    tuit: String,
+    speed: String,
     created: { type: Date, default: Date.now },
     author: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
   },
-  { collection: "tuits" }
+  { collection: "speeds" }
 );
 
-export default tuitsSchema;
+export default speedsSchema;

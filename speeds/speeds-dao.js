@@ -1,4 +1,4 @@
-import tuitsModel from "./tuits-model.js";
+import tuitsModel from "./speeds-model.js";
 
 export const findAllTuits = () =>
   tuitsModel.find().populate("author", "username").exec();
