@@ -16,7 +16,7 @@ function UsersController(app) {
       if (user) {
         res.json(user);
       } else {
-        res.sendStatus(404);
+        res.sendStatus(403);
       }
     } else {
       const users = await usersDao.findAllUsers();

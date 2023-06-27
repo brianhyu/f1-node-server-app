@@ -1,5 +1,7 @@
 import * as usersDao from "./users-dao.js";
 
+let globalUser;
+
 function AuthenticationController(app) {
   const login = async (req, res) => {
     const username = req.body.username;
@@ -9,6 +11,7 @@ function AuthenticationController(app) {
 
       if (user) {
         req.session["currentUser"] = user;
+        globalUser = user;
         res.json(user);
       } else {
         res.sendStatus(403);
@@ -26,11 +29,13 @@ function AuthenticationController(app) {
     }
     const newUser = await usersDao.createUser(req.body);
     req.session["currentUser"] = newUser;
+    user = newUser; // this should be removed when deployed on server
     res.json(newUser);
   };
 
   const profile = (req, res) => {
-    const currentUser = req.session["currentUser"];
+    //const currentUser = req.session["currentUser"];
+    const currentUser = globalUser; // this should be removed when deployed on server
     if (currentUser) {
       res.json(currentUser);
     } else {
@@ -40,6 +45,7 @@ function AuthenticationController(app) {
   
   const logout = (req, res) => {
     req.session.destroy();
+    globalUser = null; // this should be removed when deployed on server
     res.sendStatus(200);
   };
 
