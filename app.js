@@ -16,8 +16,8 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     credentials: true,
-    origin: "https://main--fancy-scone-d277a0.netlify.app"
-    //origin: "http://localhost:3000"
+    //origin: "https://main--fancy-scone-d277a0.netlify.app"
+    origin: "http://localhost:3000"
   })
 );
 
