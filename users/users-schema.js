@@ -12,7 +12,11 @@ const usersSchema = new mongoose.Schema(
     created: { type: Date, default: Date.now },
     team: {
       type: String,
-      enum: ["Ferrari", "Mercedes", "Red Bull", "McLaren", "Alpine", "AlphaTauri", "Alfa Romeo", "Haas", "Williams", "Aston Martin"],
+      enum: ["Ferrari", "Mercedes", 
+      "Red Bull", "McLaren", 
+      "Alpine", "AlphaTauri", 
+      "Alfa Romeo", "Haas", 
+      "Williams", "Aston Martin"],
       default: "Ferrari",
     }
   },

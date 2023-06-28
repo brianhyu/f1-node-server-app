@@ -22,7 +22,7 @@ function AuthenticationController(app) {
   };
 
   const register = async (req, res) => {
-    const user = await usersDao.findUserByUsername(req.body.username);
+    let user = await usersDao.findUserByUsername(req.body.username);
     if (user) {
       res.sendStatus(403);
       return;
