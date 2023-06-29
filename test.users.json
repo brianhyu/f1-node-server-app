@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "64952694155b190206608300"
+  },
+  "username": "alice",
+  "password": "123",
+  "role": "admin",
+  "created": {
+    "$date": "2023-06-22T00:00:00.000Z"
+  },
+  "team": "Ferrari",
+  "firstname": "Alice",
+  "drivers": [],
+  "speeds": []
+},
+{
+  "_id": {
+    "$oid": "64952694155b190206608301"
+  },
+  "username": "bob",
+  "password": "123",
+  "role": "driver",
+  "created": {
+    "$date": "2023-06-22T00:00:00.000Z"
+  },
+  "team": "Mercedes",
+  "firstname": "Bob",
+  "drivers": [],
+  "speeds": []
+},
+{
+  "_id": {
+    "$oid": "64952694155b190206608302"
+  },
+  "username": "charlie",
+  "password": "123",
+  "role": "spectator",
+  "created": {
+    "$date": "2023-06-22T00:00:00.000Z"
+  },
+  "team": "Haas F1 Team",
+  "firstname": "Charlie",
+  "drivers": [],
+  "speeds": []
+},
+{
+  "_id": {
+    "$oid": "649526f9155b190206608303"
+  },
+  "username": "businessmajor",
+  "password": "megabyte",
+  "role": "driver",
+  "created": "2023-06-22T00:00:00.000Z",
+  "team": "Ferrari",
+  "firstname": "Stephano",
+  "drivers": [],
+  "speeds": []
+},
+{
+  "_id": {
+    "$oid": "6497d0a4dcc6952453d9a53a"
+  },
+  "username": "test",
+  "password": "123",
+  "role": "admin",
+  "created": {
+    "$date": "2023-06-25T05:29:08.074Z"
+  },
+  "team": "Aston Martin",
+  "firstname": "Admin",
+  "drivers": [],
+  "speeds": []
+},
+{
+  "_id": {
+    "$oid": "649b9c2f1ce5bd7332b14c02"
+  },
+  "username": "testtest",
+  "password": "123",
+  "role": "admin",
+  "team": "Mercedes",
+  "created": {
+    "$date": "2023-06-28T02:34:23.520Z"
+  },
+  "drivers": [],
+  "speeds": []
+},
+{
+  "_id": {
+    "$oid": "649cfa247fad53984a652299"
+  },
+  "username": "testtesttest",
+  "password": "123",
+  "role": "admin",
+  "team": "McLaren",
+  "created": {
+    "$date": "2023-06-29T03:27:32.663Z"
+  },
+  "drivers": [],
+  "speeds": []
+}]

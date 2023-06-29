@@ -18,7 +18,9 @@ const usersSchema = new mongoose.Schema(
       "Alfa Romeo", "Haas", 
       "Williams", "Aston Martin"],
       default: "Ferrari",
-    }
+    },
+    drivers: [String],
+    speeds: [{ type: mongoose.Schema.Types.ObjectId, ref: "speeds" }]
   },
   { collection: "users" }
 );
